@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seloton Solutions - Personal Loan Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .section {
+            min-height: 100vh;
+            padding: 3rem 1.5rem;
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #3B82F6;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .service-card {
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-md fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center">
+                <h1 class="text-2xl font-bold text-blue-600">Seloton Solutions</h1>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link text-gray-700 hover:text-blue-600 px-2 py-1">Home</a>
+                <a href="#about" class="nav-link text-gray-700 hover:text-blue-600 px-2 py-1">About Us</a>
+                <a href="#services" class="nav-link text-gray-700 hover:text-blue-600 px-2 py-1">Services</a>
+                <a href="application.html" class="nav-link text-gray-700 hover:text-blue-600 px-2 py-1">Apply Now</a>
+                <a href="#contact" class="nav-link text-gray-700 hover:text-blue-600 px-2 py-1">Contact</a>
+            </nav>
+            <button class="md:hidden focus:outline-none">
+                <i class="fas fa-bars text-blue-600 text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile menu (hidden by default) -->
+        <div class="hidden md:hidden bg-white w-full pb-4 px-4">
+            <div class="flex justify-end mb-2">
+                <button class="mobile-close focus:outline-none">
+                    <i class="fas fa-times text-blue-600 text-xl"></i>
+                </button>
+            </div>
+            <a href="#home" class="block py-2 text-gray-700 hover:text-blue-600">Home</a>
+            <a href="#about" class="block py-2 text-gray-700 hover:text-blue-600">About Us</a>
+            <a href="#services" class="block py-2 text-gray-700 hover:text-blue-600">Services</a>
+            <a href="application.html" class="block py-2 text-gray-700 hover:text-blue-600">Apply Now</a>
+            <a href="#contact" class="block py-2 text-gray-700 hover:text-blue-600">Contact</a>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="section pt-24">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Find the Perfect <span class="text-blue-600">Personal Loan</span> for Your Needs</h2>
+                    <p class="text-lg text-gray-600 mb-8">Seloton Solutions connects you with trusted lenders offering competitive rates and flexible terms tailored to your financial situation.</p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="application.html" class="bg-blue-600 text-white py-3 px-8 rounded-lg hover:bg-blue-700 transition duration-300 text-center">Apply Now</a>
+                        <a href="#services" class="bg-gray-200 text-gray-800 py-3 px-8 rounded-lg hover:bg-gray-300 transition duration-300 text-center">Our Services</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="bg-blue-100 rounded-lg p-8 shadow-lg">
+                        <h3 class="text-2xl font-semibold text-blue-800 mb-4">Why Choose Seloton Solutions?</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Quick and easy online application process</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Access to multiple lenders with one application</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Competitive interest rates and flexible repayment options</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">Personalized recommendations based on your needs</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span class="text-gray-700">No obligation to accept any loan offers</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="section bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">About <span class="text-blue-600">Seloton Solutions</span></h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">We're dedicated to helping individuals and families find the right financial solutions to meet their needs and achieve their goals.</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <div class="bg-blue-50 rounded-lg p-8">
+                        <h3 class="text-2xl font-semibold text-blue-800 mb-6">Our Mission</h3>
+                        <p class="text-gray-700 mb-6">At Seloton Solutions, our mission is to empower our clients by providing access to reliable lending options that help them achieve financial stability and reach their goals. We believe everyone deserves a fair opportunity to secure funding regardless of their current financial situation.</p>
+                        
+                        <h3 class="text-2xl font-semibold text-blue-800 mb-6">Our Values</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-shield-alt text-blue-500 mt-1 mr-3 text-xl"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Integrity</h4>
+                                    <p class="text-gray-600">We operate with complete transparency and honesty.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-users text-blue-500 mt-1 mr-3 text-xl"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Client-Focused</h4>
+                                    <p class="text-gray-600">Your financial success is our top priority.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-hand-holding-heart text-blue-500 mt-1 mr-3 text-xl"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Compassion</h4>
+                                    <p class="text-gray-600">We understand financial challenges and provide respectful guidance.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-star text-blue-500 mt-1 mr-3 text-xl"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Excellence</h4>
+                                    <p class="text-gray-600">We strive to exceed expectations in all aspects of our service.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold text-blue-800 mb-6">Our Story</h3>
+                    <p class="text-gray-700 mb-4">Founded with the vision of making personal loans more accessible, Seloton Solutions has been serving the Newark community and beyond since our establishment. Our team of financial experts brings decades of combined experience in the lending industry.</p>
+                    
+                    <p class="text-gray-700 mb-4">We understand that navigating the loan application process can be overwhelming, which is why we've developed a streamlined approach to connect borrowers with lenders who can meet their specific needs. Our referral service is designed to save you time and reduce stress while searching for the right loan option.</p>
+                    
+                    <p class="text-gray-700 mb-4">Over the years, we've helped thousands of clients secure personal loans for debt consolidation, home improvements, emergency expenses, and more. We take pride in our high client satisfaction rates and our commitment to responsible lending practices.</p>
+                    
+                    <p class="text-gray-700">At Seloton Solutions, we're not just a referral service – we're your partner in achieving financial wellness.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our <span class="text-blue-600">Services</span></h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">We offer referrals for a variety of personal loan options to meet your specific financial needs.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Debt Consolidation -->
+                <div class="service-card bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mb-4">
+                            <i class="fas fa-layer-group text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Debt Consolidation Loans</h3>
+                        <p class="text-gray-600 mb-4">Combine multiple high-interest debts into a single, manageable payment. Potentially lower your overall interest rate and simplify your finances.</p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-circle text-xs text-blue-500 mr-2"></i>
+                                <span>Reduce monthly payments</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-circle text-xs text-blue-500 mr-2"></i>
+                                <span>Simplify financial management</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-circle text-xs text-blue-500 mr-2"></i>
+                                <span>Potentially lower interest rates</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Home Improvement -->
+                <div class="service-card bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mb-4">
+                            <i class="fas fa-home text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Home Improvement Loans</h3>
+                        <p class="text-gray-600 mb-4">Finance your renovation projects with competitive rates. Increase your home's value while creating the space you've always wanted.</p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-circle text-xs text-blue-500 mr-2"></i>
+                                <span>Fund major renovations</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-circle text-xs text-blue-500 mr-2"></i>
+                                <span>Fix urgent home repairs</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-circle text-xs text-blue-500 mr-2"></i>
+                                <span>Upgrade appliances and systems</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Emergency Expenses -->
+                <div class="service-card bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mb-4">
+                            <i class="fas fa-ambulance text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Emergency Expense Loans</h3>
+                        <p class="text-gray-600 mb-4">Get quick access to funds for unexpected costs like medical bills, car repairs, or other urgent expenses.</p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-circle text-xs text-blue-500 mr-2"></i>
+                                <span>Quick application process</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-circle text-xs text-blue-500 mr-2"></i>
+                                <span>Fast funding options available</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-circle text-xs text-blue-500 mr-2"></i>
+                                <span>Flexible repayment terms</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Major Purchase -->
+                <div class="service-card bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mb-4">
+                            <i class="fas fa-shopping-cart text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Major Purchase Loans</h3>
+                        <p class="text-gray-600 mb-4">Finance large purchases like appliances, furniture, or electronics with affordable monthly payments.</p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-circle text-xs text-blue-500 mr-2"></i>
+                                <span>Competitive interest rates</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-circle text-xs text-blue-500 mr-2"></i>
+                                <span>Flexible loan amounts</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-circle text-xs text-blue-500 mr-2"></i>
+                                <span>Structured repayment plans</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Vacation Loans -->
+                <div class="service-card bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mb-4">
+                            <i class="fas fa-plane text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Vacation Loans</h3>
+                        <p class="text-gray-600 mb-4">Fund your dream vacation with a personal loan designed for travel expenses. Create memories without financial stress.</p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-circle text-xs text-blue-500 mr-2"></i>
+                                <span>Fixed monthly payments</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-circle text-xs text-blue-500 mr-2"></i>
+                                <span>Better rates than credit cards</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-circle text-xs text-blue-500 mr-2"></i>
+                                <span>Predictable repayment schedule</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Wedding Loans -->
+                <div class="service-card bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mb-4">
+                            <i class="fas fa-ring text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Wedding Loans</h3>
+                        <p class="text-gray-600 mb-4">Make your special day unforgettable with financing options specifically designed for wedding expenses.</p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-circle text-xs text-blue-500 mr-2"></i>
+                                <span>Cover venue, catering, and more</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-circle text-xs text-blue-500 mr-2"></i>
+                                <span>Loans up to $50,000</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-circle text-xs text-blue-500 mr-2"></i>
+                                <span>Customizable repayment terms</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Contact <span class="text-blue-600">Us</span></h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Have questions? We're here to help. Reach out to our team using the information below.</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/2">
+                    <div class="bg-white rounded-xl shadow-md p-8">
+                        <h3 class="text-2xl font-semibold text-blue-800 mb-6">Get In Touch</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                                    <i class="fas fa-map-marker-alt text-blue-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-medium text-gray-800">Location</h4>
+                                    <!-- Updated address -->
+                                    <p class="text-gray-600">3600 NJ-69<br>Neptune Township, NJ 07753</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                                    <i class="fas fa-envelope text-blue-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-medium text-gray-800">Email</h4>
+                                    <p class="text-gray-600">info@selotonsolutions.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                                    <i class="fas fa-clock text-blue-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-medium text-gray-800">Business Hours</h4>
+                                    <p class="text-gray-600">Monday - Friday: 9:00 AM - 5:00 PM<br>Saturday - Sunday: Closed</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <div class="bg-white rounded-xl shadow-md p-8 h-full">
+                        <h3 class="text-2xl font-semibold text-blue-800 mb-6">Frequently Asked Questions</h3>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="text-lg font-medium text-gray-800">Is there a fee for using your referral service?</h4>
+                                <p class="text-gray-600">No, our loan referral service is completely free for borrowers. We receive compensation from our lending partners when we successfully match you with a loan product that meets your needs.</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-medium text-gray-800">How quickly can I get approved for a loan?</h4>
+                                <p class="text-gray-600">The approval process varies by lender and loan type. Some lenders offer same-day approval decisions, while others may take 1-3 business days to review your application.</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-medium text-gray-800">What credit score do I need to qualify?</h4>
+                                <p class="text-gray-600">We work with lenders who serve borrowers across the credit spectrum. While a higher score typically results in better rates, we have partners who specialize in working with borrowers who have less-than-perfect credit.</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-lg font-medium text-gray-800">How much can I borrow?</h4>
+                                <p class="text-gray-600">Our lending partners offer personal loans ranging from $1,000 to $50,000, depending on your qualifications, income, and the purpose of the loan.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-8 md:mb-0">
+                    <h3 class="text-2xl font-bold text-blue-400 mb-4">Seloton Solutions</h3>
+                    <p class="text-gray-300 max-w-xs">Connecting you with trusted lenders to help you achieve your financial goals.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#home" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">Home</a></li>
+                            <li><a href="#about" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">About Us</a></li>
+                            <li><a href="#services" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">Services</a></li>
+                            <li><a href="application.html" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">Apply Now</a></li>
+                            <li><a href="#contact" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-semibold text-white mb-4">Loan Types</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#services" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">Debt Consolidation</a></li>
+                            <li><a href="#services" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">Home Improvement</a></li>
+                            <li><a href="#services" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">Emergency Expenses</a></li>
+                            <li><a href="#services" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">Major Purchases</a></li>
+                            <li><a href="#services" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">Wedding Expenses</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-semibold text-white mb-4">Contact Info</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-map-marker-alt text-blue-400 mr-2"></i>
+                                <!-- Updated address -->
+                                <span class="text-gray-300">3600 NJ-69, Neptune Township, NJ 07753</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-envelope text-blue-400 mr-2"></i>
+                                <span class="text-gray-300">info@selotonsolutions.com</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">© 2023 Seloton Solutions. All rights reserved.</p>
+                <div class="mt-4 md:mt-0">
+                    <ul class="flex space-x-6">
+                        <li><a href="policies.html#privacy-policy" class="text-gray-400 hover:text-blue-400 text-sm transition-colors duration-300">Privacy Policy</a></li>
+                        <li><a href="policies.html#terms-of-use" class="text-gray-400 hover:text-blue-400 text-sm transition-colors duration-300">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-8 text-center">
+                <p class="text-gray-500 text-sm">Seloton Solutions is not a lender but a referral service that connects borrowers with lending partners. Loan approval is not guaranteed and subject to lender approval.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuButton = document.querySelector('.md\\:hidden');
+        const mobileMenu = document.querySelector('.hidden.md\\:hidden');
+        const closeButton = document.querySelector('.mobile-close');
+
+        function toggleMenu() {
+            mobileMenu.classList.toggle('hidden');
+        }
+
+        menuButton.addEventListener('click', toggleMenu);
+        closeButton.addEventListener('click', toggleMenu);
+
+        // Close menu when clicking a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', toggleMenu);
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.querySelector('.hidden.md\\:hidden');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
